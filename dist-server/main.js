@@ -85,7 +85,7 @@
  *
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
- */
+ */ 
 Object.defineProperty(exports, "__esModule", { value: true });
 var styles = [""];
 exports.styles = styles;
@@ -107,7 +107,7 @@ exports.styles = styles;
  *
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
- */
+ */ 
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./about.component.css.shim.ngstyle */ "./src/app/about/about.component.css.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
@@ -199,9 +199,9 @@ exports.AppRoutingModule = AppRoutingModule;
  *
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
- */
+ */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var styles = [""];
+var styles = [".main-container[_ngcontent-%COMP%] {\n  margin-left: 20%;\n  width: 80%;\n}"];
 exports.styles = styles;
 
 
@@ -221,27 +221,22 @@ exports.styles = styles;
  *
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
- */
+ */ 
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./app.component.css.shim.ngstyle */ "./src/app/app.component.css.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i4 = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+var i2 = __webpack_require__(/*! ./sidebar/sidebar.component.ngfactory */ "./src/app/sidebar/sidebar.component.ngfactory.js");
+var i3 = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/sidebar/sidebar.component.ts");
+var i4 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i5 = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 var styles_AppComponent = [i0.styles];
 var RenderType_AppComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_AppComponent, data: {} });
 exports.RenderType_AppComponent = RenderType_AppComponent;
-function View_AppComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 3, "div", [["style", "text-align:center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "h1", [], null, null, null, null, null)), (_l()(), i1.ɵted(2, null, [" Welcome to ", "! "])), (_l()(), i1.ɵeld(3, 0, null, null, 0, "img", [["alt", "Angular Logo"], ["src", "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="], ["width", "300"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Here are some links to help you start: "])), (_l()(), i1.ɵeld(6, 0, null, null, 3, "a", [], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 7).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(7, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(8, 1), (_l()(), i1.ɵted(-1, null, ["About"])), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(-1, null, ["Contacts"])), (_l()(), i1.ɵeld(14, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i1.ɵdid(15, 212992, null, 0, i2.RouterOutlet, [i2.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver, [8, null], i1.ChangeDetectorRef], null, null)], function (_ck, _v) { var currVal_3 = _ck(_v, 8, 0, "/about"); _ck(_v, 7, 0, currVal_3); var currVal_6 = _ck(_v, 12, 0, "/contacts"); _ck(_v, 11, 0, currVal_6); _ck(_v, 15, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 2, 0, currVal_0); var currVal_1 = i1.ɵnov(_v, 7).target; var currVal_2 = i1.ɵnov(_v, 7).href; _ck(_v, 6, 0, currVal_1, currVal_2); var currVal_4 = i1.ɵnov(_v, 11).target; var currVal_5 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_4, currVal_5); }); }
+function View_AppComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "div", [["class", ""]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "app-sidebar", [], null, null, null, i2.View_SidebarComponent_0, i2.RenderType_SidebarComponent)), i1.ɵdid(2, 114688, null, 0, i3.SidebarComponent, [], null, null), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "main-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i1.ɵdid(5, 212992, null, 0, i4.RouterOutlet, [i4.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver, [8, null], i1.ChangeDetectorRef], null, null)], function (_ck, _v) { _ck(_v, 2, 0); _ck(_v, 5, 0); }, null); }
 exports.View_AppComponent_0 = View_AppComponent_0;
-function View_AppComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), i1.ɵdid(1, 49152, null, 0, i4.AppComponent, [], null, null)], null, null); }
+function View_AppComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), i1.ɵdid(1, 49152, null, 0, i5.AppComponent, [], null, null)], null, null); }
 exports.View_AppComponent_Host_0 = View_AppComponent_Host_0;
-var AppComponentNgFactory = i1.ɵccf("app-root", i4.AppComponent, View_AppComponent_Host_0, {}, {}, []);
+var AppComponentNgFactory = i1.ɵccf("app-root", i5.AppComponent, View_AppComponent_Host_0, {}, {}, []);
 exports.AppComponentNgFactory = AppComponentNgFactory;
 
 
@@ -302,7 +297,7 @@ exports.AppModule = AppModule;
  *
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
- */
+ */ 
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! ./app.server.module */ "./src/app/app.server.module.ts");
@@ -363,7 +358,7 @@ exports.AppServerModule = AppServerModule;
  *
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
- */
+ */ 
 Object.defineProperty(exports, "__esModule", { value: true });
 var styles = [""];
 exports.styles = styles;
@@ -385,7 +380,7 @@ exports.styles = styles;
  *
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
- */
+ */ 
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./contacts.component.css.shim.ngstyle */ "./src/app/contacts/contacts.component.css.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
@@ -430,6 +425,89 @@ var ContactsComponent = /** @class */ (function () {
     return ContactsComponent;
 }());
 exports.ContactsComponent = ContactsComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/sidebar/sidebar.component.ngfactory.js":
+/*!********************************************************!*\
+  !*** ./src/app/sidebar/sidebar.component.ngfactory.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./sidebar.component.sass.shim.ngstyle */ "./src/app/sidebar/sidebar.component.sass.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ./sidebar.component */ "./src/app/sidebar/sidebar.component.ts");
+var styles_SidebarComponent = [i0.styles];
+var RenderType_SidebarComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_SidebarComponent, data: {} });
+exports.RenderType_SidebarComponent = RenderType_SidebarComponent;
+function View_SidebarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 15, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 14, "div", [["class", "sidebar d-none d-sm-block"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 13, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "logo-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "a", [["href", "/"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "img", [["alt", "Logo"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 9, "div", [["class", "sidebar-list text-left"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "div", [["class", "list-item"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["\u0412\u043E\u0439\u0442\u0438"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "div", [["class", "list-item"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F"])), (_l()(), i1.ɵeld(11, 0, null, null, 4, "a", [], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "list-item"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["\u041E \u043D\u0430\u0441"]))], function (_ck, _v) { var currVal_3 = _ck(_v, 13, 0, "/about"); _ck(_v, 12, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵinlineInterpolate(1, "", _co.logo, ""); _ck(_v, 5, 0, currVal_0); var currVal_1 = i1.ɵnov(_v, 12).target; var currVal_2 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_1, currVal_2); }); }
+exports.View_SidebarComponent_0 = View_SidebarComponent_0;
+function View_SidebarComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-sidebar", [], null, null, null, View_SidebarComponent_0, RenderType_SidebarComponent)), i1.ɵdid(1, 114688, null, 0, i4.SidebarComponent, [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_SidebarComponent_Host_0 = View_SidebarComponent_Host_0;
+var SidebarComponentNgFactory = i1.ɵccf("app-sidebar", i4.SidebarComponent, View_SidebarComponent_Host_0, {}, {}, []);
+exports.SidebarComponentNgFactory = SidebarComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/sidebar/sidebar.component.sass.shim.ngstyle.js":
+/*!****************************************************************!*\
+  !*** ./src/app/sidebar/sidebar.component.sass.shim.ngstyle.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = [".sidebar[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 20%;\n  box-shadow: inset 0 0 15px -4px black; }\n\n.logo-image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100%; }\n\n.sidebar-list[_ngcontent-%COMP%]   .list-item[_ngcontent-%COMP%] {\n  padding: 10px 25px;\n  transition: 0.3s;\n  font-size: 20px; }\n\n.sidebar-list[_ngcontent-%COMP%]   .list-item[_ngcontent-%COMP%]:hover {\n    cursor: pointer;\n    background: rebeccapurple;\n    color: snow;\n    transition: 0.3s;\n    padding-left: 35px; }\n\na[_ngcontent-%COMP%] {\n  text-decoration: none;\n  color: black; }\n\na[_ngcontent-%COMP%]:hover {\n    color: snow; }\n\n@media (max-width: 992px) {\n  .sidebar-list[_ngcontent-%COMP%]   .list-item[_ngcontent-%COMP%] {\n    font-size: 16px;\n    padding: 8px 20px; }\n    .sidebar-list[_ngcontent-%COMP%]   .list-item[_ngcontent-%COMP%]:hover {\n      padding-left: 24px; } }"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/sidebar/sidebar.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/sidebar/sidebar.component.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var SidebarComponent = /** @class */ (function () {
+    function SidebarComponent() {
+        this.logo = '../../assets/images/logo1.png';
+    }
+    SidebarComponent.prototype.ngOnInit = function () {
+    };
+    return SidebarComponent;
+}());
+exports.SidebarComponent = SidebarComponent;
 
 
 /***/ }),

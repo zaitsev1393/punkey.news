@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { AppRoutingModule } from './app-routing.module';
+import {  AppRoutingModule } from './app-routing.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
