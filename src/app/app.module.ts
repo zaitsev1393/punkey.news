@@ -6,6 +6,8 @@ import { AboutComponent } from './about/about.component';
 import {  AppRoutingModule } from './app-routing.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TopicsService} from './services/topics/topics.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TopicsService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
