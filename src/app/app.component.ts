@@ -8,6 +8,8 @@ import {TopicsService} from './services/topics/topics.service';
 })
 export class AppComponent {
   constructor(public topicsService: TopicsService) {
-
+    this.topicsService.getTopics().subscribe(topics => {
+      console.log(topics);
+    })
   }
 }
