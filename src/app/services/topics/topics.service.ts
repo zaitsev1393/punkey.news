@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient,  HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import {Observable} from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json'})
@@ -14,7 +15,7 @@ export class TopicsService {
 
   constructor( private http: HttpClient ) { }
 
-  getTopics() {
+  getTopics(): Observable<any> {
     return this.http.get(apiUrl  + '/api/v1/topics');
   }
 

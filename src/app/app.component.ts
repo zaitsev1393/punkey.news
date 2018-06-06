@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TopicsService} from './services/topics/topics.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,15 @@ import {TopicsService} from './services/topics/topics.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public topicsService: TopicsService) {
-    this.topicsService.getTopics().subscribe(topics => {
-      console.log(topics);
-    });
+
+  public data;
+
+  constructor(public topicsService: TopicsService,
+              private activatedRoute: ActivatedRoute) {
+    // this.topicsService.getTopics().subscribe(topics => {
+    //   console.log(topics);
+    // });
+    this.data = this.activatedRoute.snapshot.data['topics'];
+    console.log(this.data);
   }
 }

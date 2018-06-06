@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, BrowserTransferStateModule} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,6 +8,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TopicsService} from './services/topics/topics.service';
+import {TopicsResolver} from './services/topics-resolver/topics-resolver';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import {TopicsService} from './services/topics/topics.service';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserTransferStateModule
   ],
-  providers: [TopicsService, HttpClient],
+  providers: [TopicsService, HttpClient, TopicsResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
