@@ -685,13 +685,14 @@ var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i2 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var i3 = __webpack_require__(/*! ./topic-page.component */ "./src/app/topic-page/topic-page.component.ts");
 var i4 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i5 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var styles_TopicPageComponent = [i0.styles];
 var RenderType_TopicPageComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_TopicPageComponent, data: {} });
 exports.RenderType_TopicPageComponent = RenderType_TopicPageComponent;
 function View_TopicPageComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 11, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 0, "div", [["class", "topic-background"]], [[4, "background-image", null]], null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 9, "div", [["class", "content-section"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 1, "div", [["class", "topic-page-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(4, null, ["", ""])), (_l()(), i1.ɵeld(5, 0, null, null, 1, "div", [["class", "topic-page-text"]], null, null, null, null, null)), (_l()(), i1.ɵted(6, null, ["", ""])), (_l()(), i1.ɵeld(7, 0, null, null, 1, "div", [["class", "topic-page-author"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 2, "div", [["class", "topic-page-date"]], null, null, null, null, null)), (_l()(), i1.ɵted(10, null, ["", ""])), i1.ɵppd(11, 1)], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (("url(" + _co.topic.cover.url) + ")"); _ck(_v, 1, 0, currVal_0); var currVal_1 = _co.topic.title; _ck(_v, 4, 0, currVal_1); var currVal_2 = _co.topic.text; _ck(_v, 6, 0, currVal_2); var currVal_3 = _co.topic.user.name; _ck(_v, 8, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 10, 0, _ck(_v, 11, 0, i1.ɵnov(_v.parent, 0), _co.topic.created_at)); _ck(_v, 10, 0, currVal_4); }); }
 function View_TopicPageComponent_0(_l) { return i1.ɵvid(0, [i1.ɵpid(0, i2.DatePipe, [i1.LOCALE_ID]), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TopicPageComponent_1)), i1.ɵdid(2, 16384, null, 0, i2.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var currVal_0 = (1 == 1); _ck(_v, 2, 0, currVal_0); }, null); }
 exports.View_TopicPageComponent_0 = View_TopicPageComponent_0;
-function View_TopicPageComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-topic-page", [], null, null, null, View_TopicPageComponent_0, RenderType_TopicPageComponent)), i1.ɵdid(1, 114688, null, 0, i3.TopicPageComponent, [i4.ActivatedRoute], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_TopicPageComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-topic-page", [], null, null, null, View_TopicPageComponent_0, RenderType_TopicPageComponent)), i1.ɵdid(1, 114688, null, 0, i3.TopicPageComponent, [i4.ActivatedRoute, i5.Meta], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_TopicPageComponent_Host_0 = View_TopicPageComponent_Host_0;
 var TopicPageComponentNgFactory = i1.ɵccf("app-topic-page", i3.TopicPageComponent, View_TopicPageComponent_Host_0, {}, {}, []);
 exports.TopicPageComponentNgFactory = TopicPageComponentNgFactory;
@@ -733,12 +734,18 @@ exports.styles = styles;
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var TopicPageComponent = /** @class */ (function () {
-    function TopicPageComponent(activatedRoute) {
+    function TopicPageComponent(activatedRoute, meta) {
         this.activatedRoute = activatedRoute;
+        this.meta = meta;
         console.log(this.activatedRoute.snapshot.data);
         this.topic = this.activatedRoute.snapshot.data['topic'];
+        this.updateTags();
     }
+    TopicPageComponent.prototype.updateTags = function () {
+        this.meta.updateTag({ property: 'og:title', content: this.topic.title });
+    };
     TopicPageComponent.prototype.ngOnInit = function () {
     };
     return TopicPageComponent;
