@@ -12,7 +12,6 @@ export class SeoService {
   }
 
   updateTags(config) {
-
   }
 
 }
