@@ -11,6 +11,7 @@ import {TopicsService} from './services/topics/topics.service';
 import {TopicsResolver} from './services/topics-resolver/topics-resolver';
 import { TopicsComponent } from './topics/topics.component';
 import { TopicComponent } from './topic/topic.component';
+import { TopicPageComponent } from './topic-page/topic-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TopicComponent } from './topic/topic.component';
     ContactsComponent,
     SidebarComponent,
     TopicsComponent,
-    TopicComponent
+    TopicComponent,
+    TopicPageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
