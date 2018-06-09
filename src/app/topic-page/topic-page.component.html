@@ -1,3 +1,10 @@
-<p>
-  topic-page works!
-</p>
+<div *ngIf="1 == 1">
+  <div class="topic-background"  [style.background-image]="'url(' + topic.cover.url + ')'"></div>
+  <!--<img src="{{topic.cover.url}}" alt="">-->
+  <div class="content-section">
+    <div class="topic-page-title">{{topic.title}}</div>
+    <div class="topic-page-text">{{topic.text}}</div>
+    <div class="topic-page-author">{{topic.user.name}}</div>
+    <div class="topic-page-date">{{topic.created_at | date}}</div>
+  </div>
+</div>

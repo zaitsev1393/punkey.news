@@ -12,7 +12,7 @@ import {TopicsResolver} from './services/topics-resolver/topics-resolver';
 import { TopicsComponent } from './topics/topics.component';
 import { TopicComponent } from './topic/topic.component';
 import { TopicPageComponent } from './topic-page/topic-page.component';
-import {TopicPageResolverService} from './services/topic-page-resolver/topic-page-resolver';
+import {TopicPageResolver} from './services/topic-page-resolver/topic-page-resolver';
 
 @NgModule({
   declarations: [
