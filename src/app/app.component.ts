@@ -16,7 +16,6 @@ export class AppComponent {
     // this.topicsService.getTopics().subscribe(topics => {
     //   console.log(topics);
     // });
-    this.data = this.activatedRoute.snapshot.data['topics'];
-    console.log(this.data);
+
   }
 }

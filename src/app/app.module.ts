@@ -9,13 +9,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TopicsService} from './services/topics/topics.service';
 import {TopicsResolver} from './services/topics-resolver/topics-resolver';
+import { TopicsComponent } from './topics/topics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     ContactsComponent,
-    SidebarComponent
+    SidebarComponent,
+    TopicsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
