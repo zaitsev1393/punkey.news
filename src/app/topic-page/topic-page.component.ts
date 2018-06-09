@@ -14,8 +14,6 @@ export class TopicPageComponent implements OnInit {
               private meta: Meta) {
     console.log(this.activatedRoute.snapshot.data);
     this.topic = this.activatedRoute.snapshot.data['topic'];
-    this.meta.updateTag({property: 'og:title', content: 'test Title'});
-    this.meta.addTag({property: 'og:image', content: '//ahaha'});
   }
 
   updateTags() {
@@ -23,6 +21,8 @@ export class TopicPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.meta.updateTag({property: 'og:title', content: 'test Title'});
+    this.meta.addTag({property: 'og:image', content: '//ahaha'});
   }
 
 }
