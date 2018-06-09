@@ -10,6 +10,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TopicsService} from './services/topics/topics.service';
 import {TopicsResolver} from './services/topics-resolver/topics-resolver';
 import { TopicsComponent } from './topics/topics.component';
+import { TopicComponent } from './topic/topic.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TopicsComponent } from './topics/topics.component';
     AboutComponent,
     ContactsComponent,
     SidebarComponent,
-    TopicsComponent
+    TopicsComponent,
+    TopicComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
