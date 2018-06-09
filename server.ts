@@ -37,5 +37,5 @@ app.route('*').get((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Angular Universal Node Express server listening on http://localhost:9000`);
+  console.log(`Angular Universal Node Express server listening on http://localhost:${PORT}`);
 });
