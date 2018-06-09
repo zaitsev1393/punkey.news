@@ -15,6 +15,7 @@ export class TopicPageComponent implements OnInit {
     console.log(this.activatedRoute.snapshot.data);
     this.topic = this.activatedRoute.snapshot.data['topic'];
     this.meta.updateTag({property: 'og:title', content: 'test Title'});
+    this.meta.addTag({property: 'og:image', content: '//ahaha'});
   }
 
   updateTags() {
