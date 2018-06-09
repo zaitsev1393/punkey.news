@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng run purple-ssr:server && ng build --prod && ts-node ./server.ts",
+    "start": "ts-node server.ts",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "g run purple-ssr:server && ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +24,8 @@
     "@angular/router": "^6.0.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "ts-node": "4.1.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.0",
