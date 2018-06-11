@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ts-node server.ts",
+    "dev": "ng run purple-ssr:server && ng build --aot --prod && npm run start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
