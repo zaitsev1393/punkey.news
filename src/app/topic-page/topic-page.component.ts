@@ -24,17 +24,16 @@ export class TopicPageComponent implements OnInit {
   }
 
   async ngOnInit() {
-    let title = '';
     this.id = this.activatedRoute.snapshot.params['topicId'];
-    let data = await this.topicsService.getTopic(this.id).toPromise();
-    title = data['title'];
-    this.meta.updateTag({property: 'og:title', content: `Topic-${title}`});
+    this.topic = await this.topicsService.getTopic(this.id).toPromise();
+    this.updateTags();
   }
 
   updateTags() {
     console.log('updated');
-    this.meta.updateTag({property: 'og:title', content: `Topic-${this.id} title`});
-    this.meta.addTag({property: 'og:image', content: this.topic.cover.url});
+    this.meta.updateTag({property: 'og:title', content: this.topic.title});
+    this.meta.updateTag({property: 'og:title', content: this.topic.description})
+    this.meta.updateTag({property: 'og:image', content: this.topic.cover.url});
   }
 
 }

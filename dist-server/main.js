@@ -776,17 +776,16 @@ var TopicPageComponent = /** @class */ (function () {
     }
     TopicPageComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var title, data;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
-                        title = '';
                         this.id = this.activatedRoute.snapshot.params['topicId'];
+                        _a = this;
                         return [4 /*yield*/, this.topicsService.getTopic(this.id).toPromise()];
                     case 1:
-                        data = _a.sent();
-                        title = data['title'];
-                        this.meta.updateTag({ property: 'og:title', content: "Topic-" + title });
+                        _a.topic = _b.sent();
+                        this.updateTags();
                         return [2 /*return*/];
                 }
             });
@@ -794,8 +793,9 @@ var TopicPageComponent = /** @class */ (function () {
     };
     TopicPageComponent.prototype.updateTags = function () {
         console.log('updated');
-        this.meta.updateTag({ property: 'og:title', content: "Topic-" + this.id + " title" });
-        this.meta.addTag({ property: 'og:image', content: this.topic.cover.url });
+        this.meta.updateTag({ property: 'og:title', content: this.topic.title });
+        this.meta.updateTag({ property: 'og:title', content: this.topic.description });
+        this.meta.updateTag({ property: 'og:image', content: this.topic.cover.url });
     };
     return TopicPageComponent;
 }());
