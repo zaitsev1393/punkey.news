@@ -1,3 +1,5 @@
+@import '../app.component'
+
 .topic-background
   background-size: cover
   background-repeat: no-repeat
@@ -14,13 +16,20 @@
 .topic-page-text
   padding: 0 100px
   text-align: justify
+  @media(max-width: $small)
+    padding: 0 15px
 
 .topic-page-author
   text-align: right
   padding: 10px 115px 10px 0
   font-style: italic
+  @media(max-width: $small)
+    padding: 10px 15px
 
 .topic-page-date
   text-align: right
   padding: 0 115px 10px 0
   font-style: italic
+  @media(max-width: $small)
+    padding: 10px 15px
+

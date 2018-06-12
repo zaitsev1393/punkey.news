@@ -10,6 +10,9 @@ import {TopicsService} from '../services/topics/topics.service';
 })
 export class TopicPageComponent implements OnInit {
 
+  public pageIdentifier;
+  public pageUrl;
+
   public id: number;
   public topic: any;
   constructor(private activatedRoute: ActivatedRoute,
@@ -18,14 +21,13 @@ export class TopicPageComponent implements OnInit {
               private transferState: TransferState) {
     // console.log(this.activatedRoute.snapshot.data);
     // this.topic = this.activatedRoute.snapshot.data['topic'];
-    console.log(this.activatedRoute.parent);
-
-    console.log('topicid: ' + this.id);
   }
 
   async ngOnInit() {
     this.id = this.activatedRoute.snapshot.params['topicId'];
     this.topic = await this.topicsService.getTopic(this.id).toPromise();
+    this.pageIdentifier = this.topic.id;
+    this.pageUrl = 'http://violet-monkey.herokuapp.com/topics/' + this.topic.id;
     this.updateTags();
   }
 

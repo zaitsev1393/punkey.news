@@ -7,4 +7,7 @@
     <div class="topic-page-author">{{topic.user.name}}</div>
     <div class="topic-page-date">{{topic.created_at | date}}</div>
   </div>
+  <div class="container">
+    <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
+  </div>
 </div>

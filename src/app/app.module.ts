@@ -13,6 +13,7 @@ import { TopicsComponent } from './topics/topics.component';
 import { TopicComponent } from './topic/topic.component';
 import { TopicPageComponent } from './topic-page/topic-page.component';
 import {TopicPageResolver} from './services/topic-page-resolver/topic-page-resolver';
+import {DisqusModule} from 'angular2-disqus';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {TopicPageResolver} from './services/topic-page-resolver/topic-page-resol
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
+    DisqusModule
   ],
   providers: [TopicsService, HttpClient, TopicsResolver, TopicPageResolver],
   bootstrap: [AppComponent]
