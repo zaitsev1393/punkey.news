@@ -11,7 +11,7 @@ import {TopicPageResolver} from './services/topic-page-resolver/topic-page-resol
 const routes: Routes = [
   { path: '', component: TopicsComponent, resolve: {topics: TopicsResolver}, pathMatch: 'full' },
   { path: 'topics', component: TopicsComponent, resolve: {topics: TopicsResolver}},
-  { path: 'topics/:topicId', component: TopicPageComponent },
+  { path: 'topics/:topicId', component: TopicPageComponent, resolve: {topic: TopicPageResolver} },
   { path: 'about', component: AboutComponent},
   { path: 'contacts', component: ContactsComponent}
 ];
