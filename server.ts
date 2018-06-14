@@ -11,6 +11,8 @@ enableProdMode();
 
 const app = express();
 
+const PORT = process.env.PORT || 4000;
+
 const indexHtml = readFileSync(__dirname + '/dist/purple-ssr/index.html', 'utf-8').toString();
 
 
@@ -34,6 +36,6 @@ app.route('*').get((req, res) => {
 
 });
 
-app.listen(9000, () => {
-  console.log(`Angular Universal Node Express server listening on http://localhost:9000`);
+app.listen(PORT, () => {
+  console.log(`Angular Universal Node Express server listening on http://localhost:${PORT}`);
 });
