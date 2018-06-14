@@ -24,11 +24,19 @@ export class TopicPageComponent implements OnInit {
   }
 
   async ngOnInit() {
+    await this.getTopic();
+    this.setDisqus();
+    this.updateTags();
+  }
+
+  async getTopic() {
     this.id = this.activatedRoute.snapshot.params['topicId'];
     this.topic = await this.topicsService.getTopic(this.id).toPromise();
+  }
+
+  setDisqus() {
     this.pageIdentifier = this.topic.id;
     this.pageUrl = 'http://violet-monkey.herokuapp.com/topics/' + this.topic.id;
-    this.updateTags();
   }
 
   updateTags() {
