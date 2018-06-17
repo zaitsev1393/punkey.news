@@ -35,18 +35,25 @@ a
   font-size: 20px
   @media(min-width: 768px)
     background: #522B72
+  &:hover
+    color: #522B72
+
 
 .contacts
   color: white
   font-size: 20px
   @media(min-width: 768px)
     background: #AA6239
+  &:hover
+    color: #AA6239
 
 .join-us
   color: white
   font-size: 20px
   @media(min-width: 768px)
     background: #256F5B
+  &:hover
+    color: #256F5B
 
 .blow
   color: white
@@ -55,11 +62,19 @@ a
     text-decoration: line-through
   @media(min-width: 768px)
     background: greenyellow
+  &:hover
+    color: greenyellow
+
 
 .about-us,
 .contacts,
 .join-us,
 .blow
+  transition: 0.3s
+  &:hover
+    background: white
+    transition: 0.3s
+    cursor: pointer
   .sidebar-item-text
     @media (min-width: 1650px)
       font-size: 35px
@@ -96,7 +111,6 @@ a
   left: 0
   bottom: 0
   right: 0
-  color: white
   .square-content-essence
     display: table
     width: 100%
@@ -105,7 +119,6 @@ a
     display: table-cell
     text-align: center
     vertical-align: middle
-    color: white
 
 @media(max-width: 992px)
   .sidebar-list
