@@ -3,7 +3,7 @@
   top: 0
   left: 0
   bottom: 0
-  width: 20%
+  width: 10%
   //background: linear-gradient(to bottom, #ad5389, #3c1053)
   box-shadow: inset 0 0 15px -4px black
 
@@ -11,17 +11,17 @@
   img
     width: 100%
 
-.sidebar-list
-  .list-item
-    padding: 10px 25px
-    transition: 0.3s
-    font-size: 20px
-    &:hover
-      cursor: pointer
-      background: rebeccapurple
-      color: snow
-      transition: 0.3s
-      padding-left: 35px
+//.sidebar-list
+//  .list-item
+//    padding: 10px 25px
+//    transition: 0.3s
+//    font-size: 20px
+//    &:hover
+//      cursor: pointer
+//      background: rebeccapurple
+//      color: snow
+//      transition: 0.3s
+//      padding-left: 35px
 
 a
   text-decoration: none
@@ -30,6 +30,73 @@ a
     color: snow
 
 
+.about-us
+  color: white
+  font-size: 20px
+  @media(min-width: 768px)
+    background: #522B72
+
+.contacts
+  color: white
+  font-size: 20px
+  @media(min-width: 768px)
+    background: #AA6239
+
+.join-us
+  color: white
+  font-size: 20px
+  @media(min-width: 768px)
+    background: #256F5B
+
+.about-us,
+.contacts,
+.join-us
+  .sidebar-item-text
+    @media (min-width: 1650px)
+      font-size: 35px
+    @media (min-width: 1400px) and (max-width: 1650px)
+      font-size: 25px
+    @media(min-width: 960px) and (max-width: 1400px)
+      font-size: 20px
+    @media(min-width: 720px) and (max-width: 960px)
+      font-size: 15px
+  i
+    display: block
+    @media (min-width: 1650px)
+      font-size: 90px
+    @media (min-width: 1400px) and (max-width: 1650px)
+      font-size: 70px
+    @media(min-width: 960px) and (max-width: 1400px)
+      font-size: 45px
+    @media(min-width: 720px) and (max-width: 960px)
+      font-size: 30px
+
+
+.square-box
+  position: relative
+  width: 100%
+  overflow: hidden
+  &:before
+    content: ""
+    display: block
+    padding-top: 100%
+
+.square-content
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  color: white
+  .square-content-essence
+    display: table
+    width: 100%
+    height: 100%
+  .center-content
+    display: table-cell
+    text-align: center
+    vertical-align: middle
+    color: white
 
 @media(max-width: 992px)
   .sidebar-list
