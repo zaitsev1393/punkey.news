@@ -1,6 +1,6 @@
 <div class="feed-container">
   <div class="row no-margin">
-    <div *ngFor="let topic of topics" class="col-sm-12 col-md-6 no-padding">
+    <div *ngFor="let topic of topics" class="col-sm-12 col-md-3 no-padding">
       <a [routerLink]="['/topics', topic.id]">
         <app-topic [topic]="topic"></app-topic>
       </a>
