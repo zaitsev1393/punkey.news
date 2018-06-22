@@ -9,7 +9,18 @@ export class TopicComponent implements OnInit {
 
   @Input() topic;
 
-  constructor() { }
+  public photo: string = 'https://picsum.photos/600/400/?random';
+
+  public categories: string[] = ['Говно', 'Жопа Новикова', 'Гниды', 'Вагины', 'Елда'];
+
+  constructor() {
+  }
+
+  get category() {
+    let i: number = Math.floor(Math.random() * 5);
+    console.log(i);
+    return this.categories[i];
+  }
 
   ngOnInit() {
   }

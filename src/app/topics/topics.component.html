@@ -1,6 +1,50 @@
 <div class="feed-container">
-  <div class="row no-margin">
-    <div *ngFor="let topic of topics" class="col-sm-12 col-md-3 no-padding">
+  <div class="row">
+    <!--<div *ngFor="let topic of topics" class="col-sm-12 col-md-3 no-padding">-->
+      <!--<a [routerLink]="['/topics', topic.id]">-->
+        <!--<app-topic [topic]="topic"></app-topic>-->
+      <!--</a>-->
+    <!--</div>-->
+    <div class="col-sm-12 col-md-12 topic-test-card">
+      <a [routerLink]="['/topics', topics[0].id]">
+        <app-topic [topic]="topics[0]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-6 topic-test-card">
+      <a [routerLink]="['/topics', topics[1].id]">
+        <app-topic [topic]="topics[1]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-3 topic-test-card">
+      <a [routerLink]="['/topics', topics[2].id]">
+        <app-topic [topic]="topics[2]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-3 topic-test-card">
+      <a [routerLink]="['/topics', topics[3].id]">
+        <app-topic [topic]="topics[3]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-4 topic-test-card">
+      <a [routerLink]="['/topics', topics[4].id]">
+        <app-topic [topic]="topics[4]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-4 topic-test-card">
+      <a [routerLink]="['/topics', topics[5].id]">
+        <app-topic [topic]="topics[5]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-4 topic-test-card">
+      <a [routerLink]="['/topics', topics[6].id]">
+        <app-topic [topic]="topics[6]"></app-topic>
+      </a>
+    </div>
+    <div class="join-us">
+      Присоединяйся
+      <input type="email">
+    </div>
+    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-{{grid}} topic-test-card">
       <a [routerLink]="['/topics', topic.id]">
         <app-topic [topic]="topic"></app-topic>
       </a>

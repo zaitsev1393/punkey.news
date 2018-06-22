@@ -1,14 +1,16 @@
 <div class="card topic-card">
-  <div class="topic-image" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
+  <!--<div class="topic-image" [style.background-image]="'url(' + topic.cover.url + ')'"></div>-->
+  <div class="topic-image" [style.background-image]="'url(' + photo + ')'"></div>
   <div class="card-img-overlay">
+    <div class="category-container">
+      <div class="card-category">
+        {{category}}
+      </div>
+    </div>
     <h4 class="topic-title">{{topic.title}}</h4>
     <!--<p class="card-text">Some example text.</p>-->
     <!--<a href="#" class="btn btn-primary">See Profile</a>-->
     <div class="topic-info">
-      <span>
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        {{topic.comments_count}}
-      </span>
       <span>
         <i class="fa fa-bar-chart-o" aria-hidden="true"></i>
         {{topic.visits}}
@@ -16,3 +18,4 @@
     </div>
   </div>
 </div>
+
