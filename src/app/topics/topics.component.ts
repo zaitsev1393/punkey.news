@@ -12,8 +12,7 @@ export class TopicsComponent implements OnInit {
   public lengthAcc;
   public lengths: number[];
 
-  constructor(private activatedRoute: ActivatedRoute,
-              private cdr: ChangeDetectorRef) {
+  constructor(private activatedRoute: ActivatedRoute) {
     this.topics = this.activatedRoute.snapshot.data['topics'];
     this.lengthAcc = 0;
     this.lengths = [];
@@ -22,7 +21,7 @@ export class TopicsComponent implements OnInit {
   ngOnInit() {
   }
 
-  grid() {
+  get grid() {
     let length;
     if (this.lengthAcc < 2) {
       length = Math.round(Math.random() * (5 - 3) + 3);

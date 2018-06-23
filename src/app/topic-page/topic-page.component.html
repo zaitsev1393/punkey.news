@@ -1,23 +1,22 @@
 <div *ngIf="topic" class="row">
   <div class="topic-background" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
   <!--<img src="{{topic.cover.url}}" alt="">-->
-  <div class="content-section">
-    <div class="topic-page-title">{{topic.title}}</div>
+    <div class="topic-page-title col-sm-12">{{topic.title}}</div>
 
-    <div class="topic-extra-info">
+    <div class="topic-extra-info col-sm-12">
         <i class="far fa-clock"></i>
         {{topic.minutes_to_read}} мин.
     </div>
-
-    <div class="topic-page-text">{{topic.text}}</div>
+    <div class="col-sm-12">
+      <div class="topic-page-text">{{topic.text}}</div>
+    </div>
     <!--<div class="topic-page-author">{{topic.user.name}}</div>-->
-    <div class="topic-page-date">{{topic.created_at | date}}</div>
+    <div class="topic-page-date col-sm-12">{{topic.created_at | date}}</div>
   </div>
-  <div class="container">
+  <div class="container col-sm-12">
     <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
   </div>
 
-</div>
 
 <div class="d-md-none back-button">
   <a [routerLink]="['/']">
