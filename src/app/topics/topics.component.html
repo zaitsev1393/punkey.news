@@ -40,7 +40,7 @@
         <app-topic [topic]="topics[6]"></app-topic>
       </a>
     </div>
-    <div class="join-us">
+    <div *ngIf = "topics.length > 5" class="join-us">
       Присоединяйся
       <input type="email">
     </div>

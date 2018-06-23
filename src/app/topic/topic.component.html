@@ -2,6 +2,7 @@
   <!--<div class="topic-image" [style.background-image]="'url(' + topic.cover.url + ')'"></div>-->
   <div class="topic-image" [style.background-image]="'url(' + photo + ')'"></div>
   <div class="card-img-overlay">
+    <img src="../../assets/images/spinner.gif" alt="Loading" *ngIf="noTopic">
     <div class="category-container">
       <div class="card-category">
         {{category}}

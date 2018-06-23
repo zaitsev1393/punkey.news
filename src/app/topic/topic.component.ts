@@ -9,11 +9,14 @@ export class TopicComponent implements OnInit {
 
   @Input() topic;
 
-  public photo: string = 'https://picsum.photos/600/400/?random';
+  public noTopic: boolean;
 
+  public photo: string = 'https://picsum.photos/600/400/?random';
   public categories: string[] = ['Говно', 'Жопа Новикова', 'Гниды', 'Вагины', 'Елда'];
 
   constructor() {
+    console.log(!!this.topic);
+    this.noTopic = !!this.topic;
   }
 
   get category() {

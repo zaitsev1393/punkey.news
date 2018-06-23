@@ -8,7 +8,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class TopicsComponent implements OnInit {
 
-  public topics;
+  public topics = 0;
   public lengthAcc;
   public lengths: number[];
 
