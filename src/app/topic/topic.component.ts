@@ -15,7 +15,6 @@ export class TopicComponent implements OnInit {
   public categories: string[] = ['Говно', 'Жопа Новикова', 'Гниды', 'Вагины', 'Елда'];
 
   constructor() {
-    console.log(!!this.topic);
     this.noTopic = !!this.topic;
   }
 
