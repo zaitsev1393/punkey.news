@@ -24,14 +24,14 @@ export class TopicPageComponent implements OnInit {
   }
 
   async ngOnInit() {
-    await this.getTopic();
+    this.id = this.activatedRoute.snapshot.params['topicId'];
+    this.topic = await this.topicsService.getTopic(this.id).toPromise();
     this.setDisqus();
     this.updateTags();
   }
 
   async getTopic() {
-    this.id = this.activatedRoute.snapshot.params['topicId'];
-    this.topic = await this.topicsService.getTopic(this.id).toPromise();
+
   }
 
   setDisqus() {
