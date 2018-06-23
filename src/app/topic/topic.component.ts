@@ -11,6 +11,7 @@ export class TopicComponent implements OnInit {
 
   public photo: string = 'https://picsum.photos/600/400/?random';
   public categories: string[] = ['Говно', 'Жопа Новикова', 'Гниды', 'Вагины', 'Елда'];
+  public date;
 
   constructor() {
   }

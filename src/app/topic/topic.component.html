@@ -1,6 +1,6 @@
 <div class="card topic-card">
-  <div class="topic-image" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
-  <!--<div class="topic-image" [style.background-image]="'url(' + photo + ')'"></div>-->
+  <!--<div class="topic-image" [style.background-image]="'url(' + topic.cover.url + ')'"></div>-->
+  <div class="topic-image" [style.background-image]="'url(' + photo + ')'"></div>
   <div class="card-img-overlay">
     <!--<div class="category-container">-->
       <!--<div class="card-category">-->
@@ -17,7 +17,7 @@
       </span>
       <span>
         <i class="fas fa-calendar" aria-hidden="true"></i>
-        {{topic.created_at | date:'full'}}
+        {{topic.created_at | date:'dd.MM.yy hh:mm'}}
       </span>
       <span>
         <i class="far fa-clock"></i>

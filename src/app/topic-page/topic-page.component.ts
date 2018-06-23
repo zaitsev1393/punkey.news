@@ -40,7 +40,6 @@ export class TopicPageComponent implements OnInit {
   }
 
   updateTags() {
-    console.log(this.topic);
     this.meta.updateTag({property: 'og:title', content: this.topic.title});
     this.meta.updateTag({property: 'og:description', content: this.topic.text});
     this.meta.updateTag({property: 'og:image', content: this.topic.cover.url});

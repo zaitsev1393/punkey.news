@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -12,14 +12,17 @@ export class TopicsComponent implements OnInit {
   public lengthAcc;
   public lengths: number[];
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private cdr: ChangeDetectorRef) {
     this.topics = this.activatedRoute.snapshot.data['topics'];
     this.lengthAcc = 0;
     this.lengths = [];
-    console.log(this.topics);
   }
 
-  get grid() {
+  ngOnInit() {
+  }
+
+  grid() {
     let length;
     if (this.lengthAcc < 2) {
       length = Math.round(Math.random() * (5 - 3) + 3);
@@ -36,9 +39,6 @@ export class TopicsComponent implements OnInit {
   get loading() {
     let loading = this.topics.length === 0;
     return loading;
-  }
-
-  ngOnInit() {
   }
 
 }

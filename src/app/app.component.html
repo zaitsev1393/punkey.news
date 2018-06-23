@@ -1,6 +1,11 @@
 <div class="hidden-sm">
   <app-sidebar></app-sidebar>
 </div>
+<div *ngIf="isRoot" class="logo d-md-none text-center">
+  <img src="../assets/images/logo1.png" alt="" style="width: 100%;">
+</div>
 <div class="main-container">
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
