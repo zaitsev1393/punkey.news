@@ -8,7 +8,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class TopicsComponent implements OnInit {
 
-  public topics = 0;
+  public topics: any = [];
   public lengthAcc;
   public lengths: number[];
 
@@ -27,10 +27,15 @@ export class TopicsComponent implements OnInit {
       this.lengthAcc++;
     } else {
       length = 12 - this.lengths.reduce((a, b) => a + b, 0);
-      this.lengthAcc = 0;
       this.lengths = [];
+      this.lengthAcc = 0;
     }
     return length;
+  }
+
+  get loading() {
+    let loading = this.topics.length === 0;
+    return loading;
   }
 
   ngOnInit() {

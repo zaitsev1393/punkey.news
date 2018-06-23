@@ -5,6 +5,7 @@
         <!--<app-topic [topic]="topic"></app-topic>-->
       <!--</a>-->
     <!--</div>-->
+    <img *ngIf="loading" src="../../assets/images/spinner.gif" alt="Loading">
     <div class="col-sm-12 col-md-12 topic-test-card">
       <a [routerLink]="['/topics', topics[0].id]">
         <app-topic [topic]="topics[0]"></app-topic>

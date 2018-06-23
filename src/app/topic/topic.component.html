@@ -1,13 +1,12 @@
 <div class="card topic-card">
-  <!--<div class="topic-image" [style.background-image]="'url(' + topic.cover.url + ')'"></div>-->
-  <div class="topic-image" [style.background-image]="'url(' + photo + ')'"></div>
+  <div class="topic-image" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
+  <!--<div class="topic-image" [style.background-image]="'url(' + photo + ')'"></div>-->
   <div class="card-img-overlay">
-    <img src="../../assets/images/spinner.gif" alt="Loading" *ngIf="noTopic">
-    <div class="category-container">
-      <div class="card-category">
-        {{category}}
-      </div>
-    </div>
+    <!--<div class="category-container">-->
+      <!--<div class="card-category">-->
+        <!--{{category}}-->
+      <!--</div>-->
+    <!--</div>-->
     <h4 class="topic-title">{{topic.title}}</h4>
     <!--<p class="card-text">Some example text.</p>-->
     <!--<a href="#" class="btn btn-primary">See Profile</a>-->
@@ -15,6 +14,14 @@
       <span>
         <i class="fa fa-bar-chart-o" aria-hidden="true"></i>
         {{topic.visits}}
+      </span>
+      <span>
+        <i class="fas fa-calendar" aria-hidden="true"></i>
+        {{topic.created_at | date:'full'}}
+      </span>
+      <span>
+        <i class="far fa-clock"></i>
+        {{topic.minutes_to_read}} мин.
       </span>
     </div>
   </div>
