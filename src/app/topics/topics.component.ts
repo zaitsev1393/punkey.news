@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-topics',
   templateUrl: './topics.component.html',
-  styleUrls: ['./topics.component.css']
+  styleUrls: ['./topics.component.sass']
 })
 export class TopicsComponent implements OnInit {
 
