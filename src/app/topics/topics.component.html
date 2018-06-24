@@ -80,7 +80,7 @@
     <!--Присоединяйся-->
     <!--<input type="email">-->
     <!--</div>-->
-    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-{{grid}} topic-test-card">
+    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-4 topic-test-card">
       <a [routerLink]="['/topics', topic.id]">
         <app-topic [topic]="topic"></app-topic>
       </a>
