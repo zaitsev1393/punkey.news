@@ -1,6 +1,86 @@
 <div class="feed-container">
+
+  <!--<div class="row hidden-sm">-->
+  <!--<div class="join-us-email">-->
+  <!--Присоединяйся-->
+  <!--<input type="email">-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <div class="hidden-sm">
+    <div class="quote">
+      <div class="phrase">
+        <div class="quote-day">Цитата дня</div>
+        <div class="line"></div>
+        <div class="essence">"Я по утрам единорог, только рог в районе ног."</div>
+        <div class="line"></div>
+        <div class="author">Джейсон Стэтхем</div>
+      </div>
+      <!--<div class="photo">-->
+      <!--<img src="http://img.over-blog-kiwi.com/1/57/68/92/20150427/ob_630ae5_thumbs-002-treats-spring-jason-statham.jpg" alt="">-->
+      <!--</div>-->
+    </div>
+  </div>
+
+  <div class="row d-sm-none text-center">
+    <!--<div class="col-sm-12 small-quote">-->
+    <!--<div class="quote-day">Цитата дня</div>-->
+    <!--<div class="photo">-->
+    <!--<img src="http://img.over-blog-kiwi.com/1/57/68/92/20150427/ob_630ae5_thumbs-002-treats-spring-jason-statham.jpg" alt="">-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="col-sm-12 small-quote">
+      <div class="phrase">
+        <div class="line"></div>
+        <div class="essence">"Я по утрам единорог, только рог в районе ног."</div>
+        <div class="line"></div>
+        <div class="author">Джейсон Стэтхем</div>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
-    <div *ngFor="let topic of topics" class="col-sm-12 col-md-6">
+    <!--<img *ngIf="loading" src="../../assets/images/spinner.gif" alt="Loading">-->
+    <div class="col-sm-12 col-md-12 topic-test-card">
+      <a [routerLink]="['/topics', topics[0].id]">
+        <app-topic [topic]="topics[0]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-6 topic-test-card">
+      <a [routerLink]="['/topics', topics[1].id]">
+        <app-topic [topic]="topics[1]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-3 topic-test-card">
+      <a [routerLink]="['/topics', topics[2].id]">
+        <app-topic [topic]="topics[2]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-3 topic-test-card">
+      <a [routerLink]="['/topics', topics[3].id]">
+        <app-topic [topic]="topics[3]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-4 topic-test-card">
+      <a [routerLink]="['/topics', topics[4].id]">
+        <app-topic [topic]="topics[4]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-4 topic-test-card">
+      <a [routerLink]="['/topics', topics[5].id]">
+        <app-topic [topic]="topics[5]"></app-topic>
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-4 topic-test-card">
+      <a [routerLink]="['/topics', topics[6].id]">
+        <app-topic [topic]="topics[6]"></app-topic>
+      </a>
+    </div>
+    <!--<div class="join-us-email">-->
+    <!--Присоединяйся-->
+    <!--<input type="email">-->
+    <!--</div>-->
+    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-{{grid}} topic-test-card">
       <a [routerLink]="['/topics', topic.id]">
         <app-topic [topic]="topic"></app-topic>
       </a>
