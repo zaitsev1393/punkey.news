@@ -58,6 +58,7 @@
     transition: 0.3s
 
 .share-button
+  margin: 10px
   background: rgba(0,0,0,0)
   border: none
   padding: 0
@@ -67,11 +68,18 @@
   &:focus
     outline: 0
   .icon-share
-    color: #3b5998
     font-size: 50px
     transition: 0.3s
     &:hover
       transition: 0.3s
-      color: #8b9dc3
       cursor: pointer
+  .icon-share.facebook
+    color: #3b5998
+    &:hover
+      color: #8b9dc3
+  .icon-share.telegram
+    color: #0088cc
+    &:hover
+      color: #0088cc
+      opacity: 0.75
 
