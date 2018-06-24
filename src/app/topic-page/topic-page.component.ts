@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Meta, TransferState} from '@angular/platform-browser';
 import {TopicsService} from '../services/topics/topics.service';
 
@@ -18,7 +18,8 @@ export class TopicPageComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
               private meta: Meta,
               private topicsService: TopicsService,
-              private transferState: TransferState) {
+              private transferState: TransferState,
+              private router: Router) {
     // console.log(this.activatedRoute.snapshot.data);
     // this.topic = this.activatedRoute.snapshot.data['topic'];
   }
@@ -44,6 +45,10 @@ export class TopicPageComponent implements OnInit {
     this.meta.updateTag({property: 'og:title', content: this.topic.title});
     this.meta.updateTag({property: 'og:description', content: this.topic.text});
     this.meta.updateTag({property: 'og:image', content: this.topic.cover.url});
+  }
+
+  navigate(topic) {
+    this.router.navigateByUrl('topics/' + topic.id);
   }
 
 }

@@ -21,8 +21,21 @@
       <i class="fab fa-telegram icon-share telegram"></i>
     </button>
   </div>
-
 </div>
+<div class="row no-margin">
+  <div class="col-sm-12 trending-title">Ты наверняка словишь собачий кайф от:</div>
+    <div *ngFor="let topic of topic.trending_topics" class="col-sm-12 col-md-4">
+      <div class="hidden-sm">
+        <div (click)="navigate(topic)">
+          <app-topic [topic]="topic"></app-topic>
+        </div>
+      </div>
+      <div class="trending-small d-md-none" (click)="navigate(topic)">
+          {{topic.title}}
+      </div>
+    </div>
+</div>
+
 <div class="container col-sm-12">
   <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
 </div>
