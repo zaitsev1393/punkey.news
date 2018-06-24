@@ -15,6 +15,7 @@ import { TopicComponent } from './topic/topic.component';
 import { TopicPageComponent } from './topic-page/topic-page.component';
 import {TopicPageResolver} from './services/topic-page-resolver/topic-page-resolver';
 import {DisqusModule} from 'angular2-disqus';
+import {ShareModule} from '@ngx-share/core';
 
 @NgModule({
   declarations: [
@@ -30,10 +31,10 @@ import {DisqusModule} from 'angular2-disqus';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-
     HttpClientModule,
     BrowserTransferStateModule,
-    DisqusModule
+    DisqusModule,
+    ShareModule.forRoot()
   ],
   providers: [TopicsService, HttpClient, TopicsResolver, TopicPageResolver],
   bootstrap: [AppComponent]

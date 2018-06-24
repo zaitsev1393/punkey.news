@@ -12,6 +12,10 @@
   </div>
   <!--<div class="topic-page-author">{{topic.user.name}}</div>-->
   <div class="topic-page-date col-sm-12">{{topic.created_at | date}}</div>
+  <div class="col-sm-12">
+    <button shareButton="facebook"><i class="fab fa-facebook"></i></button>
+  </div>
+
 </div>
 <div class="container col-sm-12">
   <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
