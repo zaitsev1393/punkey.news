@@ -1,5 +1,6 @@
+<div class="container">
 <div *ngIf="topic" class="row">
-  <div class="topic-background" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
+  <div class="topic-background col-sm-12" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
   <!--<img src="{{topic.cover.url}}" alt="">-->
   <div class="topic-page-title col-sm-12">{{topic.title}}</div>
 
@@ -23,10 +24,10 @@
   </div>
 
 </div>
+</div>
 <div class="container col-sm-12">
   <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
 </div>
-
 
 <div class="d-md-none back-button">
   <a [routerLink]="['/']">
