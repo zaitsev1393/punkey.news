@@ -76,11 +76,14 @@
         <app-topic [topic]="topics[6]"></app-topic>
       </a>
     </div>
-    <!--<div class="join-us-email">-->
-    <!--Присоединяйся-->
-    <!--<input type="email">-->
-    <!--</div>-->
-    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-4 topic-test-card">
+    <div class="join-us-email">
+      // Короче, Глеб, тут нужна фраза по типу "подписывайтесь, говноеды" ну ты понял, ок??
+      <div class="join-us-socials">
+        <i class="fab fa-facebook icon-share facebook"></i>
+        <i class="fab fa-telegram icon-share telegram"></i>
+      </div>
+    </div>
+    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-{{grid}} topic-test-card">
       <a [routerLink]="['/topics', topic.id]">
         <app-topic [topic]="topic"></app-topic>
       </a>
