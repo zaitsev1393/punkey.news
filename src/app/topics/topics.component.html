@@ -7,20 +7,20 @@
   <!--</div>-->
   <!--</div>-->
 
-  <div class="hidden-sm">
-    <div class="quote">
-      <div class="phrase">
-        <div class="quote-day">Цитата дня</div>
-        <div class="line"></div>
-        <div class="essence">"Я по утрам единорог, только рог в районе ног."</div>
-        <div class="line"></div>
-        <div class="author">Джейсон Стэтхем</div>
-      </div>
-      <!--<div class="photo">-->
-      <!--<img src="http://img.over-blog-kiwi.com/1/57/68/92/20150427/ob_630ae5_thumbs-002-treats-spring-jason-statham.jpg" alt="">-->
+  <!--<div class="hidden-sm">-->
+    <!--<div class="quote">-->
+      <!--<div class="phrase">-->
+        <!--<div class="quote-day">Цитата дня</div>-->
+        <!--<div class="line"></div>-->
+        <!--<div class="essence">"Я по утрам единорог, только рог в районе ног."</div>-->
+        <!--<div class="line"></div>-->
+        <!--<div class="author">Джейсон Стэтхем</div>-->
       <!--</div>-->
-    </div>
-  </div>
+      <!--&lt;!&ndash;<div class="photo">&ndash;&gt;-->
+      <!--&lt;!&ndash;<img src="http://img.over-blog-kiwi.com/1/57/68/92/20150427/ob_630ae5_thumbs-002-treats-spring-jason-statham.jpg" alt="">&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--</div>-->
+  <!--</div>-->
 
   <div class="row d-sm-none text-center">
     <!--<div class="col-sm-12 small-quote">-->
@@ -83,7 +83,7 @@
         <i class="fab fa-telegram icon-share telegram"></i>
       </div>
     </div>
-    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-{{grid}} topic-test-card">
+    <div *ngFor="let topic of topics | slice:6" class="col-sm-12 col-md-4 topic-test-card">
       <a [routerLink]="['/topics', topic.id]">
         <app-topic [topic]="topic"></app-topic>
       </a>
