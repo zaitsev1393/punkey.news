@@ -1,7 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers)
+
 .about-us
+
   animation: fadeIn
   animation-duration: 0.5s
-  padding: 30px
+  font-family: Oswald, sans-serif
 
-  .description
-    font-weight: bold
+  .about-us-description
+    padding: 0 25px
+    font-size: 20px
+    margin: 25px 0
+
+  .they-are-talking
+    font-size: 26px
+
+  .celebs-about-us
+    margin-top: 50px
+    .celeb-card
+      position: relative
+      //padding: 0 20px
+      margin-bottom: 50px
+      text-align: center
+      .celeb-image
+        width: 200px
+        height: 200px
+        border-radius: 50%
+      .celeb-name
+        font-size: 20px
+      .celeb-status
+        color: gray
+      .celeb-line
+        display: inline-block
+        width: 50%
+      .celeb-hr
+        width: 50%
+      .celeb-line.up
+        border-bottom: 1px solid black
+      .celeb-line.down
+        border-top: 1px solid black
+      .celeb-quote
+        font-style: italic
+
+.wrap
+  padding: 5em 0.5em
+  margin: 0 auto
+
+h1
+  text-align: center
+  font-weight: normal
+  color: mediumpurple
+  transform: rotate(-5deg)
+  text-transform: uppercase
+  font-size: 8em
+  white-space: nowrap
+  font-size: 12vw
+  z-index: 1000
+  font-family: 'Bangers', cursive
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7)
+
+@media screen and (max-width: 50em)
+  h1
+    font-size: 20vw
