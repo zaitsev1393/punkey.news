@@ -10,6 +10,7 @@
     padding: 0 25px
     font-size: 20px
     margin: 25px 0
+    text-align: justify
 
   .they-are-talking
     font-size: 26px
@@ -26,20 +27,24 @@
         height: 200px
         border-radius: 50%
       .celeb-name
-        font-size: 20px
+        font-size: 26px
+        @media (max-width: 768px)
+          font-size: 32px
       .celeb-status
         color: gray
+        font-size: 20px
+        @media (max-width: 768px)
+          font-size: 22px
       .celeb-line
         display: inline-block
         width: 50%
       .celeb-hr
         width: 50%
-      .celeb-line.up
-        border-bottom: 1px solid black
-      .celeb-line.down
-        border-top: 1px solid black
       .celeb-quote
         font-style: italic
+        font-size: 17px
+        @media (max-width: 768px)
+          font-size: 20px
 
 .wrap
   padding: 5em 0.5em
