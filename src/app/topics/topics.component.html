@@ -1,6 +1,6 @@
 <div class="feed-container">
 
-  <div class="logo-image">
+  <div class="d-sm-none logo-image">
     <a [routerLink]="['/topics']">
       <img src="{{logo}}" alt="Logo">
     </a>
@@ -28,7 +28,7 @@
     <!--</div>-->
   <!--</div>-->
 
-  <div class="row d-sm-none text-center">
+  <div class="row text-center">
 
     <!--<div class="col-sm-12 small-quote">-->
     <!--<div class="quote-day">Цитата дня</div>-->
@@ -58,27 +58,27 @@
         <app-topic [topic]="topics[1]"></app-topic>
       </a>
     </div>
-    <div class="col-sm-12 col-md-3 topic-test-card">
+    <div class="col-sm-12 col-md-6 col-lg-3 topic-test-card">
       <a [routerLink]="['/topics', topics[2].id]">
         <app-topic [topic]="topics[2]"></app-topic>
       </a>
     </div>
-    <div class="col-sm-12 col-md-3 topic-test-card">
+    <div class="col-sm-12 col-md-6 col-lg-3 topic-test-card">
       <a [routerLink]="['/topics', topics[3].id]">
         <app-topic [topic]="topics[3]"></app-topic>
       </a>
     </div>
-    <div class="col-sm-12 col-md-4 topic-test-card">
+    <div class="col-sm-12 col-md-6 col-lg-4 topic-test-card">
       <a [routerLink]="['/topics', topics[4].id]">
         <app-topic [topic]="topics[4]"></app-topic>
       </a>
     </div>
-    <div class="col-sm-12 col-md-4 topic-test-card">
+    <div class="col-sm-12 col-md-6 col-lg-4 topic-test-card">
       <a [routerLink]="['/topics', topics[5].id]">
         <app-topic [topic]="topics[5]"></app-topic>
       </a>
     </div>
-    <div class="col-sm-12 col-md-4 topic-test-card">
+    <div class="col-sm-12 col-md-6 col-lg-4 topic-test-card">
       <a [routerLink]="['/topics', topics[6].id]">
         <app-topic [topic]="topics[6]"></app-topic>
       </a>
