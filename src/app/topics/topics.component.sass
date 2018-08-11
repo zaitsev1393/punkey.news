@@ -1,7 +1,16 @@
 @import "../app.component"
 
+.logo-image
+  margin: 5%
+  background: white
+  border-radius: 50%
+  img
+    width: 100%
+
 .feed-container
   margin: 0 75px
+  @media(max-width: $small)
+    margin: 0
   animation: fadeIn
   animation-duration: 0.5s
 

@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 export class TopicsComponent implements OnInit {
 
   public topics;
-
+  public logo = '../../assets/images/logo1.png';
   public lengthAcc = 0;
   public lengths = [];
 
