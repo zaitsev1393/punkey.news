@@ -8,6 +8,8 @@ import {Meta} from '@angular/platform-browser';
 })
 export class ContactsComponent implements OnInit {
 
+  public logoLetters = '../../assets/images/logo_letters1.png';
+
   constructor(public meta: Meta) {
     this.updateMetaTags();
   }
