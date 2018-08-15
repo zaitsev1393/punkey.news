@@ -1,12 +1,27 @@
 <div class="topic-page container col-sm-12">
   <div *ngIf="topic" class="row">
-    <div class="topic-background col-sm-12" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
+    <div class="topic-background col-sm-12" [style.background-image]="'url(' + topic.cover.url + ')'">
+      <div class="topic-page-title col-sm-12">{{topic.title}}</div>
+    </div>
     <!--<img src="{{topic.cover.url}}" alt="">-->
-    <div class="topic-page-title col-sm-12">{{topic.title}}</div>
+    <!--<div class="topic-page-title col-sm-12">{{topic.title}}</div>-->
 
     <div class="topic-extra-info col-sm-12">
-      <i class="far fa-clock"></i>
-      {{topic.minutes_to_read}} мин.
+      <span class="info-node">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <span>{{topic.visits}}</span>
+      </span>
+      <span class="info-node">
+        <i class="fas fa-calendar" aria-hidden="true"></i>
+        <span>{{topic.created_at | date:'dd.MM.yy hh:mm'}}</span>
+      </span>
+      <span class="info-node">
+        <i class="far fa-clock"></i>
+        <span>{{topic.minutes_to_read}} мин.</span>
+      </span>
+    </div>
+    <div class="col-sm-12">
+      <div class="topic-page-lead">{{topic.lead}}</div>
     </div>
     <div class="col-sm-12">
       <div class="topic-page-text" [innerHTML]="topic.text"></div>

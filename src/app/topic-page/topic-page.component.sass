@@ -11,19 +11,33 @@
   height: 400px
 
 .topic-page-title
+  font-weight: 200
+  color: white
+  text-shadow: 1px 1px 1px black
   text-align: center
-  font-size: 30px
+  font-size: 60px
   padding-top: 30px
   padding-bottom: 20px
 
 .topic-extra-info
+  font-weight: 200
   text-align: center
   font-size: 20px
+  padding-top: 50px
   padding-bottom: 30px
+  .info-node
+    padding-right: 25px
+    span
+      padding-left: 10px
 
 .topic-page-text
   padding: 0 100px
   //text-align: justify
+  @media(max-width: $small)
+    padding: 0 15px
+.topic-page-lead
+  padding: 25px 100px
+  font-weight: bolder
   @media(max-width: $small)
     padding: 0 15px
 
