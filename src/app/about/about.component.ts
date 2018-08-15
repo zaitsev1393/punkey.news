@@ -12,6 +12,7 @@ export class AboutComponent implements OnInit {
 
   constructor(public meta: Meta) {
     this.updateMetaTags();
+    // let n = new Notification('Opa');
   }
 
   updateMetaTags() {

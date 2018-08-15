@@ -10,6 +10,9 @@ import {ShareButtons} from '@ngx-share/core';
 export class AppComponent {
 
   constructor() {
-
+    Notification.requestPermission(function(permission) {
+      console.log('Результат запроса прав:', permission);
+    });
+    var notification = new Notification('Opa nihuya')
   }
 }
