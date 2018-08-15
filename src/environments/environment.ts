@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBase: 'http://localhost:3000',
+  apiBase: 'https://violet-monkey-api.herokuapp.com',
   token_auth_config: {
     apiBase: 'https://violet-monkey-api.herokuapp.com',
 
