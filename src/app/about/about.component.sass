@@ -69,6 +69,30 @@ h1
   font-family: 'Bangers', cursive
   text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7)
 
+.back-button
+  height: 100px
+  width: 100px
+  border-radius: 50%
+  position: fixed
+  bottom: 15px
+  right: 15px
+  //background: rgba(115,78,231,0.5)
+  background: linear-gradient(90deg, #42275a, #734b6d)
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 30px
+  transition: 0.3s
+  opacity: 0.5
+  a
+    color: white
+  &:hover
+    margin-right: 10px
+    opacity: 1
+    //background: rgba(115,78,231,1)
+    transition: 0.3s
+
+
 @media screen and (max-width: 50em)
   h1
     font-size: 20vw

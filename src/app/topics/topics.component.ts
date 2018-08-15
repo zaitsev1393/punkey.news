@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-topics',
@@ -13,9 +13,14 @@ export class TopicsComponent implements OnInit {
   public lengthAcc = 0;
   public lengths = [];
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private router: Router) {
     this.topics = this.activatedRoute.snapshot.data['topics'];
     console.log(this.topics);
+  }
+
+  navigate(path) {
+    this.router.navigateByUrl(path);
   }
 
   get grid() {
