@@ -9,6 +9,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class TopicsComponent implements OnInit {
 
   public topics;
+  public count = 0;
   public logo = '../../assets/images/logo1.png';
   public lengthAcc = 0;
   public lengths = [];
@@ -17,6 +18,10 @@ export class TopicsComponent implements OnInit {
               private router: Router) {
     this.topics = this.activatedRoute.snapshot.data['topics'];
     console.log(this.topics);
+  }
+
+  countPlus() {
+    this.count++;
   }
 
   navigate(path) {
