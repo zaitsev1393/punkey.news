@@ -1,15 +1,18 @@
 <div class="container">
-
-  <div class="row d-md-none logo-image">
-    <a [routerLink]="['/topics']">
-      <img src="{{logo}}" alt="Logo">
-    </a>
-  </div>
-  <div class="row text-center">
-    <div class="col-sm-12 d-md-none sidebar-burger text-center">
-      <div class="burger-item">Меню</div>
-      <div class="burger-item" (click)="navigate('about')">О нас</div>
-      <div class="burger-item" (click)="navigate('contacts')">Контакты</div>
+  <div>
+    <div class="row d-md-none logo-image">
+      <a [routerLink]="['/topics']">
+        <img src="{{logo}}" alt="Logo">
+      </a>
+    </div>
+    </div>
+  <div>
+    <div class="row text-center">
+      <div class="col-sm-12 d-md-none sidebar-burger text-center">
+        <div class="burger-item">Меню</div>
+        <div class="burger-item" (click)="navigate('about')">О нас</div>
+        <div class="burger-item" (click)="navigate('contacts')">Контакты</div>
+      </div>
     </div>
   </div>
 
