@@ -9,7 +9,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class TopicsComponent implements OnInit {
 
   public topics;
-  public count = 0;
+
+  public menuOpen: boolean = false;
+
   public logo = '../../assets/images/logo1.png';
   public lengthAcc = 0;
   public lengths = [];
@@ -20,8 +22,8 @@ export class TopicsComponent implements OnInit {
     console.log(this.topics);
   }
 
-  countPlus() {
-    this.count++;
+  openMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
   navigate(path) {

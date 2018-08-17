@@ -1,7 +1,9 @@
 @import "../app.component"
 
+.logo-background
+  background: #b2bdf7
+
 .logo-image
-  margin: 5%
   background: white
   border-radius: 50%
   img
@@ -77,6 +79,7 @@
   height: 65px
   overflow: hidden
   transition: 0.3s
+  margin-top: 15px
   .burger-item
     font-size: 40px
     font-weight: 100
@@ -85,6 +88,6 @@
       background: #665091
       color: white
       transition: 0.3s
-  &:hover
-    height: 180px
-    transition: 0.3s
+
+.burger-opened
+  height: 180px

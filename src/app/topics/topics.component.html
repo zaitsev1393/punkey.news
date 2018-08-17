@@ -1,21 +1,20 @@
-<div class="container">
-  <div>
-    <div class="row d-md-none logo-image">
-      <a [routerLink]="['/topics']">
-        <img src="{{logo}}" alt="Logo">
-      </a>
-    </div>
-    </div>
-  <div>
-    <div class="row text-center">
-      <div class="col-sm-12 d-md-none sidebar-burger text-center">
-        <div class="burger-item" (click)="countPlus()">Меню</div>
-        <div class="burger-item" (click)="navigate('about')">О нас</div>
-        <div class="burger-item" (click)="navigate('contacts')">Контакты</div>
-      </div>
+<div class="logo-background">
+  <div class="row d-md-none logo-image">
+    <a [routerLink]="['/topics']">
+      <img src="{{logo}}" alt="Logo">
+    </a>
+  </div>
+</div>
+<div>
+  <div class="row text-center" style="background: #b2bdf7">
+    <div class="col-sm-12 d-md-none sidebar-burger text-center" [class.burger-opened]="menuOpen">
+      <div class="burger-item" (click)="openMenu()">Меню</div>
+      <div class="burger-item" (click)="navigate('about')">О нас</div>
+      <div class="burger-item" (click)="navigate('contacts')">Контакты</div>
     </div>
   </div>
-
+</div>
+<div class="container">
 
   <div class="row">
     <div *ngIf="topics[0]" class="col-sm-12 col-md-12 topic-test-card">
@@ -28,7 +27,7 @@
         <app-topic [topic]="topics[1]"></app-topic>
       </a>
     </div>
-    <div *ngIf="topics[2]" class="col-sm-12 col-md-6 col-lg-3 topic-test-card">
+    <div *ngIf="topics[2]" class="col-sm-12 col-md-6 col-lg-{{topics.length <= 3 ? 6 : 3}} topic-test-card">
       <a [routerLink]="['/topics', topics[2].id]">
         <app-topic [topic]="topics[2]"></app-topic>
       </a>

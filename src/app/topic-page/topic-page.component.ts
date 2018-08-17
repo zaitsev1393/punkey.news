@@ -12,6 +12,7 @@ export class TopicPageComponent implements OnInit {
 
   public pageIdentifier;
   public pageUrl;
+  public editedText: string;
 
   public id: number;
   public topic: any;
@@ -33,6 +34,7 @@ export class TopicPageComponent implements OnInit {
   async getTopic() {
     this.id = this.activatedRoute.snapshot.params['topicId'];
     this.topic = await this.topicsService.getTopic(this.id).toPromise();
+    this.editedText = this.topic.text.replace(/(<|&lt;)br\s*\/*(>|&gt;)/g,' ');
   }
 
   setDisqus() {
