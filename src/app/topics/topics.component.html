@@ -52,7 +52,7 @@
         <app-topic [topic]="topics[6]"></app-topic>
       </a>
     </div>
-    <div class="join-us-email">
+    <div *ngIf="topics.length > 7" class="join-us-email">
       Глеб, зафигач здесь напоминалку, что-то типа: подпишись, заклинаем тебя всеми силами интернета
       <div class="join-us-socials">
         <a href="https://www.facebook.com/punkeynews/" target="_blank">
