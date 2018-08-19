@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Meta, TransferState} from '@angular/platform-browser';
+import {Meta, Title, TransferState} from '@angular/platform-browser';
 import {TopicsService} from '../services/topics/topics.service';
 
 @Component({
@@ -8,7 +8,7 @@ import {TopicsService} from '../services/topics/topics.service';
   templateUrl: './topic-page.component.html',
   styleUrls: ['./topic-page.component.sass']
 })
-export class TopicPageComponent implements OnInit {
+export class TopicPageComponent implements OnInit, OnDestroy {
 
   public pageIdentifier;
   public pageUrl;
@@ -18,6 +18,7 @@ export class TopicPageComponent implements OnInit {
   public topic: any;
   constructor(private activatedRoute: ActivatedRoute,
               private meta: Meta,
+              private title: Title,
               private topicsService: TopicsService,
               private transferState: TransferState,
               private router: Router) {
@@ -43,9 +44,17 @@ export class TopicPageComponent implements OnInit {
   }
 
   updateTags() {
+    this.title.setTitle('Punkey News | ' + this.topic.title);
+    this.meta.updateTag({property: 'keywords', content: this.topic.keywords ? this.topic.keywords : 'comedy news'});
+    this.meta.updateTag({property: 'description', content: this.topic.lead});
+
     this.meta.updateTag({property: 'og:title', content: this.topic.title});
     this.meta.updateTag({property: 'og:description', content: this.topic.lead});
     this.meta.updateTag({property: 'og:image', content: this.topic.cover.url});
+  }
+
+  ngOnDestroy() {
+    this.title.setTitle('Punkey News | Новости которые хочется обсудить');
   }
 
   navigate(topic) {
