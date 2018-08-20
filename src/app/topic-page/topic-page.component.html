@@ -1,6 +1,7 @@
 <div class="topic-page container col-sm-12">
   <div *ngIf="topic" class="row">
     <div class="topic-background col-sm-12" [style.background-image]="'url(' + topic.cover.url + ')'">
+      <div class="topic-background-shadow"></div>
       <div class="topic-page-title col-sm-12">{{topic.title}}</div>
     </div>
     <div class="col-sm-12 topic-cover-author">{{topic.photographer}}</div>
