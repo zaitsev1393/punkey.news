@@ -17,7 +17,7 @@
 <div class="container">
 
   <div class="row">
-    <div *ngIf="topics[0]" class="col-sm-12 col-md-12 topic-test-card">
+    <div *ngIf="topics[0]" class="col-sm-12 col-md-12 topic-test-card topic-test-primary-card">
       <a [routerLink]="['/topics', topics[0].id]">
         <app-topic [topic]="topics[0]"></app-topic>
       </a>
