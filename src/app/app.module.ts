@@ -16,6 +16,7 @@ import { TopicPageComponent } from './topic-page/topic-page.component';
 import {TopicPageResolver} from './services/topic-page-resolver/topic-page-resolver';
 import {DisqusModule} from 'angular2-disqus';
 import {ShareModule} from '@ngx-share/core';
+import { MamobileSubscribeComponent } from './mamobile-subscribe/mamobile-subscribe.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {ShareModule} from '@ngx-share/core';
     SidebarComponent,
     TopicsComponent,
     TopicComponent,
-    TopicPageComponent
+    TopicPageComponent,
+    MamobileSubscribeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
