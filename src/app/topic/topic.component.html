@@ -6,14 +6,14 @@
     <!--{{category}}-->
     <!--</div>-->
     <!--</div>-->
-    <h4 class="topic-title">{{topic.title}}</h4>
+    <h4 class="topic-title" [class.small]="size == 'small'">{{topic.title}}</h4>
     <!--<p class="card-text">Some example text.</p>-->
     <!--<a href="#" class="btn btn-primary">See Profile</a>-->
     <div class="topic-info">
-      <span>
-        <i class="fa fa-bar-chart-o" aria-hidden="true"></i>
-        {{topic.visits}}
-      </span>
+      <!--<span>-->
+        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+        <!--{{topic.visits}}-->
+      <!--</span>-->
       <span>
         <i class="fas fa-calendar" aria-hidden="true"></i>
         {{topic.created_at | date:'dd.MM.yy hh:mm'}}
@@ -24,5 +24,6 @@
       </span>
     </div>
   </div>
+  <div class="overlay-shadow"></div>
 </div>
 

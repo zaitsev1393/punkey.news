@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers)
+
+.about-us
+  animation: fadeIn
+  animation-duration: 0.5s
+  font-family: "Verdana", serif
+
+  .logo-letters
+    width: 50%
+    margin: 30px 0 15px 0
+    @media(max-width: 576px)
+      width: 100%
+
+  .about-us-description
+    padding: 0 25px
+    font-size: 20px
+    margin: 25px 0
+    text-align: justify
+
+  .they-are-talking
+    font-size: 26px
+
+  .celebs-about-us
+    margin-top: 50px
+    .celeb-card
+      position: relative
+      //padding: 0 20px
+      margin-bottom: 50px
+      text-align: center
+      .celeb-image
+        height: 200px
+        display: inline-block
+        width: 200px
+        background-repeat: no-repeat
+        background-size: cover
+        border-radius: 50%
+      .celeb-name
+        font-size: 26px
+        @media (max-width: 768px)
+          font-size: 32px
+      .celeb-status
+        color: gray
+        font-size: 20px
+        @media (max-width: 768px)
+          font-size: 22px
+      .celeb-line
+        display: inline-block
+        width: 50%
+      .celeb-hr
+        width: 50%
+      .celeb-quote
+        font-style: italic
+        font-size: 17px
+        @media (max-width: 768px)
+          font-size: 20px
+
+.wrap
+  padding: 5em 0.5em
+  margin: 0 auto
+
+h1
+  text-align: center
+  font-weight: normal
+  color: mediumpurple
+  transform: rotate(-5deg)
+  text-transform: uppercase
+  font-size: 8em
+  white-space: nowrap
+  font-size: 12vw
+  z-index: 1000
+  font-family: 'Bangers', cursive
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7)
+
+.back-button
+  height: 100px
+  width: 100px
+  border-radius: 50%
+  position: fixed
+  bottom: 65px
+  right: 15px
+  //background: rgba(115,78,231,0.5)
+  background: linear-gradient(90deg, #42275a, #734b6d)
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 30px
+  transition: 0.3s
+  opacity: 0.5
+  a
+    color: white
+  &:hover
+    margin-right: 10px
+    opacity: 1
+    //background: rgba(115,78,231,1)
+    transition: 0.3s
+
+.punkey-license
+  font-size: 12px
+  padding: 0 15px 15px 15px
+
+@media screen and (max-width: 50em)
+  h1
+    font-size: 20vw

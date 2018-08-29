@@ -1,28 +1,65 @@
 @import '../app.component'
 
+.topic-page
+  animation: fadeIn
+  animation-duration: 0.5s
 .topic-background
+  position: relative
   background-size: cover
   background-repeat: no-repeat
-  background-position: center
+  background-position: top
   width: 100%
-  height: 400px
+  height: 500px
+  .topic-background-shadow
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.25)
+
+.topic-cover-author
+  font-size: 12px
+  color: rgba(0,0,0,0.5)
 
 .topic-page-title
+  font-weight: 200
+  color: white
+  text-shadow: 2px 2px 2px black
   text-align: center
-  font-size: 30px
+  font-size: 45px
+  font-family: "Verdana", serif
+  @media(max-width: 812px)
+    font-size: 30px
   padding-top: 30px
   padding-bottom: 20px
 
 .topic-extra-info
+  font-weight: 200
   text-align: center
   font-size: 20px
-  padding-bottom: 30px
+  padding-top: 25px
+  //padding-bottom: 30px
+  .info-node
+    padding-right: 25px
+    span
+      padding-left: 10px
+  @media(max-width: 812px)
+    padding-bottom: 25px
 
 .topic-page-text
   padding: 0 100px
-  text-align: justify
+  font-family: Georgia
+  font-size: 18px
   @media(max-width: $small)
-    padding: 0 15px
+    padding: 0
+.topic-page-lead
+  padding: 25px 100px
+  font-weight: bolder
+  font-size: 18px
+  font-family: "Verdana", serif
+  @media(max-width: $small)
+    padding: 0 0 20px 0
 
 .topic-page-author
   text-align: right
@@ -43,7 +80,7 @@
   width: 100px
   border-radius: 50%
   position: fixed
-  bottom: 15px
+  bottom: 75px
   right: 15px
   //background: rgba(115,78,231,0.5)
   background: linear-gradient(90deg, #42275a, #734b6d)
@@ -72,7 +109,7 @@
   &:focus
     outline: 0
   .icon-share
-    font-size: 50px
+    font-size: 75px
     transition: 0.3s
     &:hover
       transition: 0.3s
@@ -94,3 +131,17 @@
 .trending-title
   padding: 15px
   font-weight: bold
+
+.share-us
+  font-weight: bold
+  margin-top: 25px
+
+.text-end-hr
+  margin-left: 100px
+  width: 20%
+  border-top: 1px solid black
+  @media(max-width: 812px)
+    margin: 0
+
+.trending-small
+  padding: 5px 0

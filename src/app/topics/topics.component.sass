@@ -1,26 +1,55 @@
 @import "../app.component"
 
+.logo-background
+  background: #b2bdf7
+
+.logo-image
+  background: white
+  border-radius: 50%
+  img
+    width: 100%
+    height: 100%
+
 .feed-container
-  margin: 0 15px
-//margin: 0 10px
-//margin-right: 20px
-//margin-left: 50px
+  margin: 0 75px
+  @media(max-width: $small)
+    margin: 0
+  animation: fadeIn
+  animation-duration: 0.5s
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 .topic-test-card
   padding: 15px
 
+.topic-test-primary-card
+  .topic-image
+    background-position: top
+
 .join-us-email
   width: 100%
-  background: linear-gradient(90deg, #42275a, #734b6d)
-  padding: 15px
+  //background: linear-gradient(90deg, #42275a, #734b6d)
+  background: #42275a
+  padding: 10px
   text-align: center
   color: white
-  font-size: 25px
+  font-size: 16px
   margin: 5px 15px
 
+.join-us-socials
+  a
+    color: white
+  font-size: 50px
+  i
+    margin: 10px
 
 .quote
   margin-top: 15px
+  margin-bottom: 15px
   border-left: 10px solid #35035C
   width: 100%
   background: linear-gradient(90deg, #42275a, #734b6d)
@@ -49,3 +78,20 @@
 .line
   border-bottom: 1px solid rgba(255,255,255,0.5)
   margin: 5px 0
+
+.sidebar-burger
+  height: 65px
+  overflow: hidden
+  transition: 0.3s
+  margin-top: 15px
+  .burger-item
+    font-size: 40px
+    font-weight: 100
+    color: black
+    &:hover
+      background: #665091
+      color: white
+      transition: 0.3s
+
+.burger-opened
+  height: 180px

@@ -1,6 +1,7 @@
-$small: '768px'
 @import '~@ngx-share/button/styles/share-buttons'
 @import '~@ngx-share/button/styles/themes/default/default-theme'
+
+$small: '768px'
 
 .main-container
   margin-left: 20%
@@ -13,3 +14,8 @@ $small: '768px'
   @media(max-width: $small)
     display: none
 
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1

@@ -2,15 +2,32 @@
   <div class="sidebar d-none d-sm-block">
     <div>
       <div class="logo-image">
-        <a href="/">
+        <a [routerLink]="['/']">
           <img src="{{logo}}" alt="Logo">
         </a>
       </div>
       <div class="sidebar-list text-left">
         <div class="info-container">
-          <div class="div-container">- Кто мы? -</div>
-          <div class="div-container">- Контакты -</div>
-          <div class="div-container">- Сокиабле -</div>
+          <a [routerLink]="['/about/']">
+            <div class="div-container animation">
+              О нас
+            </div>
+          </a>
+          <a [routerLink]="['/contacts']">
+            <div class="div-container">
+              Контакты
+            </div>
+          </a>
+          <div class="join-us-socials">
+            <div class="subscribe-label">Подпишись на нас</div>
+            <a href="https://www.facebook.com/punkeynews/" target="_blank">
+              <i class="fab fa-facebook icon-share facebook"></i>
+            </a>
+            <a href="https://t.me/punkeynews" target="_blank">
+              <i class="fab fa-telegram icon-share telegram"></i>
+            </a>
+          </div>
+          <!--<div class="div-container">- Сокиабле -</div>-->
         </div>
       </div>
     </div>

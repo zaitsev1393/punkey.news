@@ -1,20 +1,40 @@
-<div class="container">
+<div class="topic-page container col-sm-12">
   <div *ngIf="topic" class="row">
-    <div class="topic-background col-sm-12" [style.background-image]="'url(' + topic.cover.url + ')'"></div>
+    <div class="topic-background col-sm-12" [style.background-image]="'url(' + topic.cover.url + ')'">
+      <div class="topic-background-shadow"></div>
+      <div class="topic-page-title col-sm-12">{{topic.title}}</div>
+    </div>
+    <div class="col-sm-12 topic-cover-author">{{topic.photographer}}</div>
     <!--<img src="{{topic.cover.url}}" alt="">-->
-    <div class="topic-page-title col-sm-12">{{topic.title}}</div>
+    <!--<div class="topic-page-title col-sm-12">{{topic.title}}</div>-->
 
     <div class="topic-extra-info col-sm-12">
-      <i class="far fa-clock"></i>
-      {{topic.minutes_to_read}} мин.
+      <!--<span class="info-node">-->
+        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+        <!--<span>{{topic.visits}}</span>-->
+      <!--</span>-->
+      <span class="info-node">
+        <i class="fas fa-calendar" aria-hidden="true"></i>
+        <span>{{topic.created_at | date:'dd.MM.yy hh:mm'}}</span>
+      </span>
+      <span class="info-node">
+        <i class="far fa-clock"></i>
+        <span>{{topic.minutes_to_read}} мин.</span>
+      </span>
     </div>
     <div class="col-sm-12">
-      <div class="topic-page-text">{{topic.text}}</div>
+      <div class="topic-page-lead">{{topic.lead}}</div>
+    </div>
+    <div class="col-sm-12">
+      <div class="topic-page-text" [innerHTML]="editedText"></div>
+    </div>
+    <div class="col-sm-12">
+      <div class="text-end-hr"></div>
     </div>
     <!--<div class="topic-page-author">{{topic.user.name}}</div>-->
-    <div class="topic-page-date col-sm-12">{{topic.created_at | date}}</div>
+    <!--<div class="topic-page-date col-sm-12">{{topic.created_at | date}}</div>-->
     <div class="col-sm-12 text-center">
-      <div class="share-us">Поделись если не лох:</div>
+      <div class="share-us">Поделись с друзьями, ведь ты лучший из людей</div>
       <button class="share-button" shareButton="facebook">
         <i class="fab fa-facebook icon-share facebook"></i>
       </button>
@@ -23,7 +43,7 @@
       </button>
     </div>
   </div>
-  <div class="row no-margin">
+  <div *ngIf="topic" class="row">
     <div class="col-sm-12 trending-title">Ты наверняка словишь собачий кайф от:</div>
       <div *ngFor="let topic of topic.trending_topics" class="col-sm-12 col-md-4">
         <div class="hidden-sm">
