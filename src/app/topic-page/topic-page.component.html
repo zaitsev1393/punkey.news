@@ -4,7 +4,7 @@
       <div class="topic-background-shadow"></div>
       <div class="topic-page-title col-sm-12">{{topic.title}}</div>
     </div>
-    <div class="col-sm-12 topic-cover-author">{{topic.photographer || ''}}</div>
+    <div class="col-sm-12 topic-cover-author">{{topic.photographer === undefined ? topic.photographer : ''}}</div>
     <!--<img src="{{topic.cover.url}}" alt="">-->
     <!--<div class="topic-page-title col-sm-12">{{topic.title}}</div>-->
 
