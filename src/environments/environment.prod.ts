@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiBase: 'https://violet-monkey-api.herokuapp.com',
+  apiBase: 'https://violet-monkey-staging-api.herokuapp.com',
   token_auth_config: {
     apiBase: 'https://violet-monkey-api.herokuapp.com',
 
