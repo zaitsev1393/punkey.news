@@ -28,7 +28,7 @@ export class TopicPageComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
     await this.getTopic();
-    this.setDisqus();
+    // this.setDisqus();
     this.updateTags();
   }
 

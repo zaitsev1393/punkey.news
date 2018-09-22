@@ -17,6 +17,7 @@ import {TopicPageResolver} from './services/topic-page-resolver/topic-page-resol
 import {DisqusModule} from 'angular2-disqus';
 import {ShareModule} from '@ngx-share/core';
 import { MamobileSubscribeComponent } from './mamobile-subscribe/mamobile-subscribe.component';
+import {ShareButtonModule} from '@ngx-share/button';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { MamobileSubscribeComponent } from './mamobile-subscribe/mamobile-subscr
     AppRoutingModule,
     HttpClientModule,
     BrowserTransferStateModule,
-    DisqusModule,
+    // DisqusModule,
     ShareModule.forRoot()
   ],
   providers: [TopicsService, HttpClient, TopicsResolver, TopicPageResolver],

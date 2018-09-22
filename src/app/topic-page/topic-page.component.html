@@ -43,7 +43,7 @@
       </button>
     </div>
   </div>
-  <div *ngIf="topic" class="row">
+  <div *ngIf="topic" class="row" style="margin-bottom: 50px">
     <div class="col-sm-12 trending-title">Ты наверняка словишь собачий кайф от:</div>
       <div *ngFor="let topic of topic.trending_topics" class="col-sm-12 col-md-4">
         <div class="hidden-sm">
@@ -62,7 +62,7 @@
   </div>
 </div>
 <div class="container col-sm-12">
-  <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
+  <!--<disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>-->
 </div>
 
 <div class="d-md-none back-button">
