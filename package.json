@@ -33,7 +33,8 @@
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "ts-node": "4.1.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.0",
