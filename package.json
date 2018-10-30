@@ -34,7 +34,8 @@
     "rxjs": "^6.0.0",
     "ts-node": "4.1.0",
     "zone.js": "^0.8.26",
-    "reflect-metadata": "^0.1.12"
+    "reflect-metadata": "^0.1.12",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.0",
